@@ -21,7 +21,7 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "vscode-chrome-debug-core": "3.16.5",
+    "vscode-chrome-debug-core": "3.21.1",
     "vscode-debugadapter": "^1.22.0",
     "archiver": "^1.3.0",
     "co": "^4.6.0",
