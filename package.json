@@ -32,7 +32,8 @@
     "nugget": "^1.6.0",
     "pify": "^2.3.0",
     "shelljs": "^0.6.0",
-    "user-home": "^2.0.0"
+    "user-home": "^2.0.0",
+    "snyk": "^1.168.0"
   },
   "devDependencies": {
     "@types/archiver": "^0.15.37",
@@ -83,7 +84,9 @@
     "intTest": "mocha --timeout 20000 -s 3500 -u tdd --colors --reporter node_modules/vscode-chrome-debug-core-testsupport/out/loggingReporter.js ./out/test/int/*.test.js",
     "lint": "tslint -t verbose \"src/**/*.ts\"",
     "vscode:prepublish": "gulp verify-no-linked-modules",
-    "postinstall": "node ./node_modules/vscode/bin/install"
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "contributes": {
     "breakpoints": [
@@ -419,5 +422,6 @@
         "when": "debugType == 'nwjs'"
       }
     ]
-  }
+  },
+  "snyk": true
 }
